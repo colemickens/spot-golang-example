@@ -141,13 +141,10 @@ func TestEncode(t *testing.T) {
 		t.Error("failed to enocde properly")
 	}
 
-	b = append([]byte{'\n'}, b...)
-	b = append(b, '\n')
 	testStr(t, TEST_JSON, string(b), "failed to encode properly")
 }
 
-const TEST_JSON string = `
-{
+const TEST_JSON string = `{
 	"response": {
 		"feedMessageResponse": {
 			"count": 1,
@@ -183,5 +180,4 @@ const TEST_JSON string = `
 			}
 		}
 	}
-}
-`
+}`
