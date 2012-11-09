@@ -67,7 +67,6 @@ func GetFeed(feedId string) (*SpotApiResponse, error) {
 	dec := json.NewDecoder(resp.Body)
 	defer resp.Body.Close()
 
-	// this should be your Typed object instead of interface{}
 	spotResp := &SpotApiResponse{}
 	if err := dec.Decode(spotResp); err != nil {
 		return nil, err
