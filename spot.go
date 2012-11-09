@@ -55,6 +55,7 @@ type Message struct {
 }
 
 func GetFeed(feedId string) (*SpotApiResponse, error) {
+	// you sure you want to skip verification?
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},
 	}
